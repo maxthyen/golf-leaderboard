@@ -3,8 +3,16 @@
   "version": "0.0.1",
   "description": "Display the current week's golf standings in the terminal",
   "main": "index.js",
+  "repository" : { 
+    "type" : "git",
+    "url" : "https://github.com/maxthyen/golf-leaderboard.git"
+  },
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=4.0"
   },
   "keywords": [
     "golf",
