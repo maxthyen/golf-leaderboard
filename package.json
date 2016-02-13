@@ -1,0 +1,22 @@
+{
+  "name": "golf-leaderboard",
+  "version": "0.0.1",
+  "description": "Display the current week's golf standings in the terminal",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "golf",
+    "pga",
+    "leaderboard"
+  ],
+  "author": "max thyen",
+  "license": "ISC",
+  "dependencies": {
+    "blessed": "^0.1.81",
+    "blessed-contrib": "^2.5.3",
+    "lodash": "^4.3.0",
+    "table-scraper": "0.0.2"
+  }
+}
