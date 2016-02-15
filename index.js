@@ -32,9 +32,10 @@ function updateLeaderboard() {
     let filterInput;
     const now = new Date();
 
-    // column number/widths just hardcoded for now, should be more intelligently calculated...
+    // column number/widths just hardcoded for now, issue opened for calculating these more intelligently...
     const colWidths = _.map(_.range(0,11), (el) => 8);
-    colWidths[2] = 24 // player column
+    colWidths[1] = 24 // player column (post-tournament)
+    colWidths[2] = 24 // player column (live tournament)
 
     table = grid.set(1, 0, 9, 1, contrib.table, {
       keys: true,
@@ -52,7 +53,7 @@ function updateLeaderboard() {
     });
     
     table.setLabel({
-      text: `Last updated: ${now.getHours()}:${now.getMinutes()} (updates every ${updateFrequencyMins} minutes)`,
+      text: `Last updated: ${now.getHours()}:${now.getMinutes() < 10 ? 0 : ''}${now.getMinutes()} (updates every ${updateFrequencyMins} minutes)`,
       side: 'right'
     });
 
